@@ -16,8 +16,10 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 export default function CheckboxesTags({...props}) {
 const [data,setData] = useState(null)    
+const [select,setSelect] = useState('')    
 
-console.log(data);  
+// console.log(data);
+console.log(select);  
   return (
     <Autocomplete
       multiple
@@ -26,9 +28,10 @@ console.log(data);
       disableCloseOnSelect
       getOptionLabel={(option) => option.title}
       
-    //   getOptionSelected={(option) => console.log(option)}
+      getOptionSelected={(option) => setSelect(option)}
       renderOption={(option, { selected }) => (
         <>
+        {/* {console.log(selected)} */}
         {/* {console.log(option)} */}
           <Checkbox
             icon={icon}

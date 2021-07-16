@@ -1,6 +1,6 @@
 import { Field, FieldArray} from "formik";
 import { Select, MenuItem, Box} from "@material-ui/core";
-import TypographyComponent from "../Typography";
+import TypographyComponent from "../../Typography";
 const  MultipleSelectorForm = ({initialState , selector , label, upgraded , name }) => {
 
     return (

@@ -4,7 +4,7 @@ import * as yup from "yup";
 import MyRadio from '../../RadioBox'
 import {MyTextField} from '../../MyTextField'
 import {radio , selector} from '../../../utils/consts'
-import SelectorForm from '../../SelectorForm'
+import SelectorForm from '../../Selector'
 import {Box, Button} from '@material-ui/core';
 
 const validationSchema = yup.object({

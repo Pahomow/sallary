@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import {Button,Dialog, DialogActions,DialogContent,DialogTitle, TextField} from '@material-ui/core'
 
-export default function Table({columns , rows}) {
+export default function Table({columns , rows }) {
   const [currentRow,setCurrentRow] = useState(null)
   const [showDialog,setShowDialog] = useState(false)
   const [dataRows, setDataRows] = useState(rows)

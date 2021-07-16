@@ -14,6 +14,7 @@ const SelectorForm = ({initialState , selector , label, upgraded , name }) => {
                     key={name}
                     name={name}
                     type={name}
+                    // multiple
                     // select ="prog"
                     // value="middle"
                     as={Select}

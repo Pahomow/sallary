@@ -9,7 +9,8 @@ import ButtonComponent from '../../Button'
 import MyRadio from '../../RadioBox'
 import { radio ,selector} from '../../../utils/consts'
 import Box from '@material-ui/core/Box';
-import TechnologyCheckbox from "../../TechnologyCheckboxUpper";
+import TechnologyCheckbox from "../../Usefull/TechnologyCheckboxUpper";
+import CheckboxComponent from "../../Checkbox";
 
 
 const validationSchema = yup.object({
@@ -39,7 +40,10 @@ const FreelancerForm = ({initialValues}) => {
               <MyTextField label="Freelancer" placeholder="Фамилия Имя Отчество" name="freelancerName" />
             </Box>
             <Box>
-            <TechnologyCheckbox state={initialValues} name="multiSelect"/>
+              <TechnologyCheckbox state={initialValues} name="multiSelect"/>
+            </Box>
+            <Box>
+              <CheckboxComponent state={initialValues}/>
             </Box>
             <Box>
               {radio.freelancers.map(item =>  <MyRadio name="freelancers" type="radio" value={item.value} label={item.label} key={item.key} />)}

@@ -10,7 +10,7 @@ import {
 import * as yup from "yup";
 import { MyTextField } from "../../MyTextField";
 import ButtonComponent from "../../Button";
-import SelectorForm from "../../SelectorForm";
+import SelectorForm from "../../Selector";
 import { managers } from "../../../mocks";
 import ListComponent from "../../List";
 const validationSchema = yup.object({

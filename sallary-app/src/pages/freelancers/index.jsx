@@ -10,8 +10,9 @@ const FreelancePage = () => {
         project: [
           {type: 'Project'},
         ],
+        knowledgeStack: [],
         freelancers:{},
-        multiSelect:{},
+        // multiSelect:{},
         startDate:""  
     }
     return(

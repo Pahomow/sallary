@@ -70,6 +70,8 @@ export const radio = {
     ]
 
 }
+export const knowledgeStack = ["c++","c#","ruby","js","java","swift","python","react"]
+
 
 export const selector = {
     team : [
