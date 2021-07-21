@@ -39,7 +39,9 @@ function generate(element) {
 
 const ListComponent = ({remove}) => {
   const classes = useStyles();
-
+  const handleclick = () => {
+    console.log("click");
+  }
   return (
     <Box>  
       <Box>
@@ -59,7 +61,7 @@ const ListComponent = ({remove}) => {
                   />
                   {remove && <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
-                      <DeleteIcon />
+                      <DeleteIcon onClick={handleclick}/>
                     </IconButton>
                   </ListItemSecondaryAction>}
 

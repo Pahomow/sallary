@@ -6,9 +6,9 @@ import {MyTextField} from '../../MyTextField'
 import {radio , selector} from '../../../utils/consts'
 import SelectorForm from '../../Selector'
 import {Box} from '@material-ui/core';
-import ListComponent from "../../List";
 import ButtonComponent from "../../Button";
 import TypographyComponent from "../../Typography";
+import {ListFormik} from "../../ListFormik";
 
 const validationSchema = yup.object({
   firstName: yup
@@ -40,17 +40,22 @@ const CustomerForm = ({initialValues}) => {
                 <SelectorForm label="Клиент" name="select" initialState={values.client} selector={selector.team}/>                         
             </Box>
             <Box>
-                <ListComponent remove="true"/>
+                <ListFormik removeButton="true" name="projects" initialValues={values.projects}/>            
             </Box>
             <Box>
-              <MyTextField label="Добавить нового сотрудника" placeholder="Введите ФИО нового сотрудника" name="name" />
+              <MyTextField label="Добавить новый проект" placeholder="Введите ФИО нового сотрудника" name="name" />
             </Box>
             <Box>
                 <ButtonComponent title="Добавить"/>
             </Box>  
             <Box>
+              <Box>
+              <MyTextField label="Добавить нового Клиента " placeholder="Добавить нового Клиента" name="client " />
+              </Box>
+              <Box>
              <TypographyComponent title="Сотрудничает с юридическим лицом:"/>   
             {radio.countries.map(item =>  <MyRadio name="countries" type="radio" value={item.value} label={item.label} key={item.key} />)}              
+              </Box>
             </Box>
             <Box>
                 <ButtonComponent title="Добавить"/>

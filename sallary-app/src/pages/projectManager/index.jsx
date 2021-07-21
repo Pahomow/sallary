@@ -1,7 +1,7 @@
 import { Box, Grid } from "@material-ui/core"
 import ProjectManagerForm from "../../components/Forms/ProjectManagerForm"
 import Table from "../../components/Tables/Table"
-import { projectMangers,customers  } from "../../mocks"
+import { projectMangers,pmManager  } from "../../mocks"
 import { columns } from "../../utils/consts"
 const ProjectManagerPage = () => {
 const initialValues = {
@@ -17,7 +17,7 @@ const initialValues = {
                 <ProjectManagerForm initialValues={initialValues} projectManagers = {projectMangers}/>
             </Grid>
             <Grid item  xs={5}>
-                <Table columns={columns.customers} rows= {customers }/>
+                <Table columns={columns.pmManager} rows= {pmManager }/>
             </Grid>
         </Grid>
     )

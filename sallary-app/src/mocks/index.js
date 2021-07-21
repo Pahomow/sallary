@@ -110,6 +110,11 @@ export const salesType = [
   {field: 'Inband', value: '25%', id:'2'},
   {field: 'Free', value: '30%', id:'3'},
   ]
+export const overall = [  
+  {field: 'Outband', value: '20%', id:'1'},
+  {field: 'Inband', value: '25%', id:'2'},
+  {field: 'Free', value: '30%', id:'3'},
+  ]  
 
 export const freelancers = [
   { id: 1, Name: "Hello", Techonology: "Worldsds" , Role: "wqd", Project:"wwdd", Rate:"erfe", Payment: "ddffdf"},
@@ -124,8 +129,35 @@ export const freelancers = [
   { id: 10, Name: "Hello", Techonology: "Worldsds" , Role: "wqd", Project:"wwdd", Rate:"erfe", Payment: "ddffdf"}, 
 ]
 export const customers = [
-  { id: 1, Customer: "Alex", Project: "WorldWibe" , Entity: "uk"},
-  { id: 2, Customer: "Oleg", Project: "Fls" , Entity: "rb"},
-  { id: 3, Customer: "Igor", Project: "Give" , Entity: "rb"},
-  { id: 4, Customer: "Maks", Project: "Vision" , Entity: "uk"},
+  { id: 1, Customer: "Alex", Project: "WorldWibe" ,Status: "Active", Entity: "uk"},
+  { id: 2, Customer: "Oleg", Project: "Fls" ,Status: "Active", Entity: "rb"},
+  { id: 3, Customer: "Igor", Project: "Give" ,Status: "Not Active", Entity: "rb"},
+  { id: 4, Customer: "Maks", Project: "Vision" ,Status: "Active", Entity: "uk"},
+]
+export const salesManager = [
+  { id: 1, SM: "Alex", Project: "WorldWibe" ,Customer: "Active"},
+  { id: 2, SM: "Oleg", Project: "Fls" ,Customer: "Active"},
+  { id: 3, SM: "Igor", Project: "Give" ,Customer: "Not Active"},
+  { id: 4, SM: "Maks", Project: "Vision" ,Customer: "Active"},
+]
+export const pmManager = [
+  { id: 1, PM: "Alex", Project: "WorldWibe" ,Customer: "Active"},
+  { id: 2, PM: "Oleg", Project: "Fls" ,Customer: "Active"},
+  { id: 3, PM: "Igor", Project: "Give" ,Customer: "Not Active"},
+  { id: 4, PM: "Maks", Project: "Vision" ,Customer: "Active"},
+]
+
+export const freelanceExpenses = [
+  { id: 1, Freelancer: "Alex", Project: "WorldWibe" ,Role: "Active",Hours:"21", FreelancerBonus: "2", Payed: "3000" },
+  { id: 2, Freelancer: "Oleg", Project: "Fls" ,Role: "Active",Hours:"21", FreelancerBonus:"223", Payed: "3000" },
+  { id: 3, Freelancer: "Igor", Project: "Give" ,Role: "Not Active",Hours:"21", FreelancerBonus:"2111", Payed: "3000" },
+  { id: 4, Freelancer: "Maks", Project: "Vision" ,Role: "Active",Hours:"21", FreelancerBonus:"225", Payed: "3000" },
+]
+
+export const bonuses = [
+  { id: 1, OrderNumber: "Alex", ProjectNumber: "WorldWibe" ,Customer: "Active",NameOfProject:"21", SaleType: "2", Amount: "Amount" },
+  { id: 2, OrderNumber: "Alex", ProjectNumber: "WorldWibe" ,Customer: "Active",NameOfProject:"21", SaleType: "2", Amount: "Amount" },
+  { id: 3, OrderNumber: "Alex", ProjectNumber: "WorldWibe" ,Customer: "Active",NameOfProject:"21", SaleType: "2", Amount: "Amount" },
+  { id: 4, OrderNumber: "Alex", ProjectNumber: "WorldWibe" ,Customer: "Active",NameOfProject:"21", SaleType: "2", Amount: "Amount" },
+  
 ]

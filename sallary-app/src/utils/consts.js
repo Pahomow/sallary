@@ -11,6 +11,10 @@ export const ACCOUNTING_ROUTE = '/accouting'
 export const ACCOUNTING_TABLE_ROUTE = '/accouting_table'
 export const OVERALL_ROUTE = '/over_all'
 
+export const FREELANCE_EXPENSES = '/freelanceExpenses'
+export const SM_BONUSES = '/smBonuses'
+export const PM_BONUSES = '/pmBonuses'
+export const TOTAL_TABLE = '/totalTable'
 
 export const user = true
 
@@ -44,11 +48,63 @@ export const columns = {
         {width: 150 ,label: 'Rate', field: 'Rate', headerName: 'Рейт', minWidth: 100 , align: 'center',},
         {width: 150 ,label: 'Payment', field: 'Payment', headerName: 'Дата оплаты', minWidth: 100 , align: 'center',},
     ],
+    bonuses: [
+        {width: 150 ,label: 'Order Number', field: 'OrderNumber', headerName: 'Order Number', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Project Number', field: 'ProjectNumber', headerName: 'Project Number', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Name of Project', field: 'NameOfProject', headerName: 'Name of Project', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Sale type', field: 'SaleType', headerName: 'Sale type', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'The amount of the bonus (USD)', field: 'Amount', headerName: 'The amount of the bonus (USD)', minWidth: 100 , align: 'center',},
+    ],  
+    freelanceExpenses: [
+        {width: 150 ,label: 'Freelancer', field: 'Freelancer', headerName: 'Freelancer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project', field: 'Project', headerName: 'Project', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Role', field: 'Role', headerName: 'Role', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Hours',field: 'Hours', headerName: 'Hours', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Freelancer bonus', field: 'FreelancerBonus', headerName: 'Freelancer bonus', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Payed', field: 'Payed', headerName: 'Payed', minWidth: 170 , align: 'center', },
+    ],
     customers: [
         {width: 150 ,label: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
         {width: 150 ,label: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
         {width: 150 ,label: 'Entity', field: 'Entity', headerName: 'Юридическое лицо', minWidth: 100 , align: 'center',},
+    ],
+    salesManager: [
+        {width: 150 ,label: 'SM', field: 'SM', headerName: 'SM', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Проект', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Клиент', field: 'Customer', headerName: 'Клиент', minWidth: 100 , align: 'center',},
+        
+    ],
+    pmManager: [
+        {width: 150 ,label: 'PM', field: 'PM', headerName: 'PM', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Проект', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Клиент', field: 'Customer', headerName: 'Клиент', minWidth: 100 , align: 'center',},
+        
+    ],
+    overall: [
+        {width: 150 ,label: 'Order Number', field: 'Order Number', headerName: 'Order Number', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project Number', field: 'Project Number', headerName: 'Project Number', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Name of Project', field: 'Name of Project', headerName: 'Name of Project', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Status', field: 'Status', headerName: 'Status', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Start Date', field: 'Start Date', headerName: 'Start Date', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Sale Type', field: 'Sale Type', headerName: 'Sale Type', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Sales Manager', field: 'Sales Manager', headerName: 'Sales Manager', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project Type', field: 'Project Type', headerName: 'Project Type', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project Manager', field: 'Project Manager', headerName: 'Project Manager', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Freelancer', field: 'Freelancer', headerName: 'Freelancer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Freelancer role', field: 'Freelancer role', headerName: 'Freelancer role', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Developer', field: 'Developer', headerName: 'Developer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Rate', field: 'Rate', headerName: 'Rate', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'UI/UX Designer', field: 'UI/UX Designer', headerName: 'UI/UX Designer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Rate', field: 'Rate', headerName: 'Rate', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Business Analyst', field: 'Business Analyst', headerName: 'Business Analyst', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Rate', field: 'Rate', headerName: 'Rate', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'QA Engineer', field: 'QA Engineer', headerName: 'QA Engineer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Rate', field: 'Rate', headerName: 'Rate', minWidth: 170 , align: 'center', },
     ]
+
 };
 
 export const radio = {
@@ -75,18 +131,41 @@ export const knowledgeStack = ["c++","c#","ruby","js","java","swift","python","r
 
 export const selector = {
     team : [
-        {value: 'junior' , label: 'Junior' , id: '1'},
-        {value: 'junior+' , label: 'Junior+' , id: '2'},
-        {value: 'middle' , label: 'Middle' , id: '3'},
-        {value: 'middle+' , label: 'Middle+' , id: '4'},
-        {value: 'senior' , label: 'Senior' , id: '5'},
-        {value: 'senior+' , label: 'Senior+' , id: '6'},
-        {value: 'lead' , label: 'Lead' , id: '7'},
+        {value: 'junior-' , label: 'Junior-' , id: '1'},
+        {value: 'junior' , label: 'Junior' , id: '2'},
+        {value: 'junior+' , label: 'Junior+' , id: '3'},
+        {value: 'middle-' , label: 'Middle' , id: '4'},
+        {value: 'middle' , label: 'Middle-' , id: '5'},
+        {value: 'middle+' , label: 'Middle+' , id: '6'},
+        {value: 'senior-' , label: 'Senior-' , id: '7'},
+        {value: 'senior' , label: 'Senior' , id: '8'},
+        {value: 'senior+' , label: 'Senior+' , id: '9'},
+        {value: 'lead' , label: 'Lead' , id: '10'},
         
     ],
     freelancers: [
         {value: 'Project junior ' , label: 'Project Junior ' , id: '1'},
         {value: 'Project middle ' , label: 'Project Middle ' , id: '2'},
         {value: 'Project senior ' , label: 'Project Senior ' , id: '3'},
+    ],
+}
+
+export const selectorInput = {
+    values: [
+        {value: 1, id: 1 ,label: 1,},
+        {value: 2, id: 2 ,label: 2,},
+        {value: 3, id: 3 ,label: 3,},
+        {value: 4, id: 4 ,label: 4,},
+        {value: 5, id: 5 ,label: 5,},
+        {value: 6, id: 6 ,label: 6,},
+        {value: 7, id: 7 ,label: 7,},
+        {value: 8, id: 8 ,label: 8,},
+        {value: 9, id: 9 ,label: 9,},
+    ],
+    team: [
+        {value: 'customers' ,name: 'customers', label: 'Разработчик' , id: '1'},
+        {value: 'ba' ,name: 'ba', label: 'БА' , id: '2'},
+        {value: 'qa' ,name: 'qa', label: 'QA' , id: '3'},
+        {value: 'designer' ,name: 'designer', label: 'Дизайнер' , id: '4'},
     ]
 }

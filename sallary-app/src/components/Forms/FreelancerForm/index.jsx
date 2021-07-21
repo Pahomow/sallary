@@ -39,9 +39,9 @@ const FreelancerForm = ({initialValues}) => {
             <Box>
               <MyTextField label="Freelancer" placeholder="Фамилия Имя Отчество" name="freelancerName" />
             </Box>
-            <Box>
+            {/* <Box>
               <TechnologyCheckbox state={initialValues} name="multiSelect"/>
-            </Box>
+            </Box> */}
             <Box>
               <CheckboxComponent state={initialValues}/>
             </Box>

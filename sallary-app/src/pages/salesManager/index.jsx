@@ -1,7 +1,7 @@
 import { Grid, Box } from "@material-ui/core"
 import SalesManagerForm from "../../components/Forms/SalesManagerForm"
 import Table from '../../components/Tables/Table'
-import { customers  } from "../../mocks"
+import { salesManager  } from "../../mocks"
 import { columns } from "../../utils/consts"
 const SalesManagerPage = () => {
     const initialValues = {
@@ -18,7 +18,7 @@ const SalesManagerPage = () => {
                 </Grid>
 
                 <Grid item xs={5}>
-                <Table columns={columns.customers} rows= {customers }/>
+                <Table columns={columns.salesManager} rows= {salesManager }/>
                 </Grid>
             </Grid>
         </Box>

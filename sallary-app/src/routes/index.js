@@ -1,4 +1,4 @@
-import {LOGIN_ROUTE, CUSTOMER_ROUTE , TEAM_ROUTE , OVERALL_ROUTE,FREELANCERS_ROUTE,PROGECT_MANAGER_ROUTE,PROGECT_TYPE_ROUTE ,SALES_MANAGER_ROUTE,SALES_TYPE_ROUTE, ACCOUNTING_ROUTE, } from '../utils/consts'
+import {LOGIN_ROUTE,FREELANCE_EXPENSES, SM_BONUSES,TOTAL_TABLE, PM_BONUSES,CUSTOMER_ROUTE , TEAM_ROUTE , OVERALL_ROUTE,FREELANCERS_ROUTE,PROGECT_MANAGER_ROUTE,PROGECT_TYPE_ROUTE ,SALES_MANAGER_ROUTE,SALES_TYPE_ROUTE, ACCOUNTING_ROUTE, } from '../utils/consts'
 // import LoginPage from '../pages'
 import CustomerPage from '../pages/customer'
 import AccountingPage from '../pages/accountingPage'
@@ -10,6 +10,10 @@ import Team from '../pages/team/index'
 import SalesManager from '../pages/salesManager'
 import OverAll from '../pages/overall'
 
+import FreelanceExpenses from '../pages/freelanceExpenses'
+import SmBonuses from '../pages/smBonuses'
+import PmBonuses from '../pages/pmBonuses'
+import TotalTable from '../pages/totalTable'
 
 export const publicRoutes = [
     {
@@ -64,4 +68,25 @@ export const privateRoutes = [
         name:'Accounting',
         Component: AccountingPage
     },
+    {
+        path: FREELANCE_EXPENSES,
+        name:'Freelance Expence',
+        Component: FreelanceExpenses
+    },
+    {
+        path: SM_BONUSES,
+        name:'SM bonuses',
+        Component: SmBonuses
+    },
+    {
+        path: PM_BONUSES,
+        name:'PM bonuses',
+        Component: PmBonuses
+    },
+    {
+        path: TOTAL_TABLE,
+        name:'Total Table',
+        Component: TotalTable
+    },
+    
 ]

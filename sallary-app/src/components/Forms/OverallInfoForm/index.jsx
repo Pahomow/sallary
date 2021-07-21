@@ -6,9 +6,10 @@ import {MyTextField} from '../../MyTextField'
 import {radio , selector} from '../../../utils/consts'
 // import ButtonComponent from "../../Button";
 import SelectorForm from '../../Selector'
-import {Box, Button} from '@material-ui/core';
+import {Box, Button,Grid} from '@material-ui/core';
 import InputBox from "../../InputBox";
-
+import FormDatePicker from '../../TimePickers'
+import CheckboxComponent from "../../Checkbox";
 const validationSchema = yup.object({
   firstName: yup
     .string()
@@ -18,7 +19,7 @@ const validationSchema = yup.object({
   .number()
 });
 //
-const OverallInfoForm = ({initialValues}) => {
+const OverallInfoForm = ({initialValues,selector}) => {
   return (
       <Box>
       <Formik
@@ -34,27 +35,61 @@ const OverallInfoForm = ({initialValues}) => {
       >
         {({ values, errors, isSubmitting }) => (
           <Form>
-            <InputBox state={initialValues}/>
-            <Box>
-              <MyTextField label="Внутренний порядковый номер" placeholder="Введите порядковый номер" name="name" />
-            </Box>  
-            {/* <Box>
-            {radio.team.map(item =>  <MyRadio name="employers" type="radio" value={item.value} label={item.label} key={item.key} />)}              
-            </Box> */}
-            {/* <Box>
-              <SelectorForm name="select" initialValues={values.select} selector={selector.team}/>                         
-            </Box> */}
+            <Grid container spacing={3}>
+              <Grid item xs={6}>
+                <Box>
+                  <MyTextField label="Номер проекта" placeholder="Введите порядковый номер" name="name" />
+                </Box>   
+                {/* <Box>
+                {radio.team.map(item =>  <MyRadio name="employers" type="radio" value={item.value} label={item.label} key={item.key} />)}              
+                </Box>  */}
+                <Box>
+                  <SelectorForm label="Клиент" name="select" initialValues={values.select} selector={selector.team}/>                         
+                </Box> 
+                <Box>
+                  <SelectorForm label="Название проекта" name="nameProject" initialValues={values.select} selector={selector.team}/>                         
+                </Box>
+                <Box>
+                  <FormDatePicker/>
+                </Box>
+                <Box>
+                  <SelectorForm label="Тип продажи" name="typeSale" initialValues={values.select} selector={selector.team}/>                         
+                </Box> 
+                <Box>
+                  <SelectorForm label="Тип проекта" name="typeProject" initialValues={values.select} selector={selector.team}/>                         
+                </Box> 
+                <Box>
+                  <SelectorForm label="Тип проекта" name="salesManager" initialValues={values.select} selector={selector.team}/>                         
+                </Box> 
+                <Box>
+                  <SelectorForm label="Тип проекта" name="projectManager" initialValues={values.select} selector={selector.team}/>                         
+                </Box> 
+              </Grid>
+
+              <Grid item xs={6}>
+                <CheckboxComponent state={initialValues}/>
+
+                {selector.team.map((item) => (
+                <InputBox initialValues={values} 
+                          label={item.label}
+                          name={item.name} 
+                          typographyComponentName={item.label} 
+                          value={item.value} 
+                          numberOfEmployees={selector.values}/>
+                  ))}
+                
+              </Grid>
+            </Grid>
             {/* <Box>
               <MyTextField label="Данные о ЗП" placeholder="Введите данные о зарплате" name="data" />
             </Box>              */}
             <Box>
-              {/* <ButtonComponent disabled={isSubmitting}  title= 'Добавить' /> */}
               <Button disabled={isSubmitting} type="submit">
                 submit
               </Button>
             </Box>
             <pre>{JSON.stringify(values, null, 2)}</pre>
-            <pre>{JSON.stringify(errors, null, 2)}</pre>
+            <pre>{JSON.stringify(errors, null, 2)}</pre>  
           </Form>
         )}
       </Formik>
@@ -63,3 +98,6 @@ const OverallInfoForm = ({initialValues}) => {
 };
 
 export default OverallInfoForm;
+
+
+

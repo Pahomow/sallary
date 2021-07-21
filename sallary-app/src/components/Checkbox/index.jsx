@@ -14,7 +14,7 @@ const CheckboxComponent= ({state}) => (
             </label>
             ))}         
           </Box>
-          <button type="submit">Submit</button>
+          {/* <button type="submit">Submit</button> */}
         </Box>
       )}
       </FieldArray>

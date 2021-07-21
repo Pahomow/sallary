@@ -3,6 +3,9 @@ import { Box } from "@material-ui/core"
 // import MultipleSelectorForm from "../../components/TechnologyCheckboxUpper"
 // import Table from "../../components/Tables/Table"
 // import ButtonComponent from "../../components/Button"
+import {selectorInput,columns} from '../../utils/consts'
+import {overall} from '../../mocks'
+import Table from "../../components/Tables/Table"
 const OverAllPage = () => {
     const initialValues = {
         name: "project3",
@@ -29,13 +32,23 @@ const OverAllPage = () => {
         businessAnalysts: [
             {_id:"", rate: ""},
         ],
+        client: [
+
+        ],
+        // customers: null,
+        // ba: null,
+        // qa: null,
+        // designer: null
     }
     return(
         <Box>
-            <OverallInfoForm initialValues={initialValues}/>
+            <OverallInfoForm initialValues={initialValues} selector ={selectorInput} />
             {/* <MultipleSelectorForm/>
             <ButtonComponent/>
             <Table/> */}
+            <Box>
+                <Table rows={overall} columns={columns.overall}/>
+            </Box>
         </Box>
     )
     }

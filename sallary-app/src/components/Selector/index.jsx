@@ -1,7 +1,7 @@
 import { Field, FieldArray} from "formik";
 import { Select, MenuItem, Box} from "@material-ui/core";
 import TypographyComponent from "../Typography";
-const SelectorForm = ({initialState , selector , label, upgraded , name }) => {
+const SelectorForm = ({initialState , selector , label,name }) => {
 
     return (
         <>
@@ -12,11 +12,8 @@ const SelectorForm = ({initialState , selector , label, upgraded , name }) => {
         <Box>
                 <Field
                     key={name}
-                    name={name}
-                    type={name}
-                    // multiple
-                    // select ="prog"
-                    // value="middle"
+                    name={name} 
+                    // type={name}
                     as={Select}
                 >
                     {selector.map(item => <MenuItem key={item.id} value={item.value}>{item.label}</MenuItem>)}
