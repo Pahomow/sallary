@@ -7,7 +7,7 @@ import DataSelector from "../../components/YearMounthsSelector";
 const PmBonuses = () => {
     const initialValues = {
         year: "2020",
-        mounth:"dfgsfg",
+        mounth:"may",
       }
     return (
         <Grid>

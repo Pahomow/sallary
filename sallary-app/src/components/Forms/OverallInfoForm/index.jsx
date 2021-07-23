@@ -53,16 +53,16 @@ const OverallInfoForm = ({initialValues,selector}) => {
                   <FormDatePicker/>
                 </Box>
                 <Box>
-                  <SelectorForm label="Тип продажи" name="typeSale" initialValues={values.select} selector={selector.team}/>                         
+                  <SelectorForm label="Тип продажи" name="typeOfSale" initialValues={values.typeOfSale} selector={selector.team}/>                         
                 </Box> 
                 <Box>
-                  <SelectorForm label="Тип проекта" name="typeProject" initialValues={values.select} selector={selector.team}/>                         
+                  <SelectorForm label="Тип проекта" name="typeOfProject" initialValues={values.typeOfProject} selector={selector.team}/>                         
                 </Box> 
                 <Box>
-                  <SelectorForm label="Тип проекта" name="salesManager" initialValues={values.select} selector={selector.team}/>                         
+                  <SelectorForm label="Sales manager" name="smId" initialValues={values.smId} selector={selector.team}/>                         
                 </Box> 
                 <Box>
-                  <SelectorForm label="Тип проекта" name="projectManager" initialValues={values.select} selector={selector.team}/>                         
+                  <SelectorForm label="Project manager" name="pmId" initialValues={values.pmId} selector={selector.team}/>                         
                 </Box> 
               </Grid>
 

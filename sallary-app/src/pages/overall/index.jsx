@@ -10,10 +10,10 @@ const OverAllPage = () => {
     const initialValues = {
         name: "project3",
         number: "1",
-        typeOfSale: "Outband",
-        typeOfProject: "Outsource",
-        pmId: "",
-        smId: "",
+        typeOfSale: "ba",
+        typeOfProject: "ba",
+        pmId: "ba",
+        smId: "ba",
         technologies: ["js","java","PHP"],
         freelancers: [
             {_id:"", hours: ""},
@@ -32,9 +32,9 @@ const OverAllPage = () => {
         businessAnalysts: [
             {_id:"", rate: ""},
         ],
-        client: [
-
-        ],
+        select: "ba",
+        nameProject:"qa",
+       
         // customers: null,
         // ba: null,
         // qa: null,
