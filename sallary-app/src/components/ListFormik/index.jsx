@@ -34,20 +34,6 @@ export const ListFormik = ({initialValues, name, removeButton}) => {
                    <List>
                   {showDialog && (<Dialog open={showDialog}>
                      <DialogTitle>Вы уверены?</DialogTitle>
-                     <DialogContent> 
-                       {/* {columns.map((item) => {
-                         return (
-                           <TextField
-                           key={item.id} 
-                           label={item.label}
-                           placeholder="Enter Your name"
-                           fullWidth 
-                           name={item.field}
-                           // value= {currentRow.name}
-                           onChange={handleChange}/>
-                         )
-                       })} */}
-                     </DialogContent>
                      <DialogActions>
                        <Button variant="contained" color="primary" onClick={()=> handleclick(remove)}>
                          Да
@@ -75,6 +61,3 @@ export const ListFormik = ({initialValues, name, removeButton}) => {
           </FieldArray>
   </Box>
 )};
-
-        //   {/* <button type="submit">Invite</button> */}
-        //   <pre>{JSON.stringify(values, null, 2)}</pre>

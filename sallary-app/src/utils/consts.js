@@ -169,3 +169,42 @@ export const selectorInput = {
         {value: 'designer' ,name: 'designer', label: 'Дизайнер' , id: '4'},
     ]
 }
+
+export const dateSelector = {
+    mounths: [
+    {id:"1", label:"Январь",value:"mounth"},
+    {id:"2", label:"Февраль",value:"mounth"},
+    {id:"3", label:"Март",value:"mounth"},
+    {id:"4", label:"Апрель",value:"mounth"},
+    {id:"5", label:"Май",value:"mounth"},
+    {id:"6", label:"Июнь",value:"mounth"},
+    {id:"7", label:"Июль",value:"mounth"},
+    {id:"8", label:"Август",value:"mounth"},
+    {id:"9", label:"Сентябрь",value:"mounth"},
+    {id:"10", label:"Октябрь",value:"mounth"},
+    {id:"11", label:"Ноябрь",value:"mounth"},
+    {id:"12", label:"Декабрь",value:"mounth"},
+    ],
+    years: [
+    {id:"1", label:"2018", value:"year"},
+    {id:"2", label:"2019", value:"year"},
+    {id:"3", label:"2020", value:"year"},
+    {id:"4", label:"2021", value:"year"},
+    {id:"5", label:"2022", value:"year"},
+    {id:"6", label:"2023", value:"year"},
+    {id:"7", label:"2024", value:"year"},
+    {id:"8", label:"2025", value:"year"},
+    ],
+}
+// Январь [yan-VAR’] January
+// Февраль [fye-VRAL’] February
+// Март [MART] March
+// Апрель [ap-RYEL’] April
+// Май [MAY] May
+// Июнь [ee-YOON’] June
+// Июль [ee-YOOL’] July
+// Август [AV-goost] August
+// Сентябрь [syen-TYABR’] September
+// Октябрь [ok-TYABR’] October
+// Ноябрь [no-YABR’] November
+// Декабрь 
