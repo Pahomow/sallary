@@ -6,7 +6,7 @@ const AccoutingPage = () => {
 return(
     <div>
         {/* <TableUpper /> */}
-        <TableEditable rows={customers} column={columns.customers}/>
+        {/* <TableEditable rows={customers} column={columns.customers}/> */}
     </div>
 )
 }

@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 const FreelancePage = () => {
     const initialValues = {
         freelancerName: "",
-        rateScope: "",
+        // rateScope: "",
         project: [
           {type: 'Project'},
         ],

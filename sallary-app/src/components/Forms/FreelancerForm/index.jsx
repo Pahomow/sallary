@@ -35,6 +35,7 @@ const FreelancerForm = ({initialValues}) => {
       >
         {({ values, errors, isSubmitting }) => (
           <Form>
+            {console.log(values)} 
             <Box>
               <MyTextField label="Freelancer" placeholder="Фамилия Имя Отчество" name="freelancerName" />
             </Box>
@@ -44,7 +45,7 @@ const FreelancerForm = ({initialValues}) => {
             <Box>
               {radio.freelancers.map(item =>  <MyRadio name="freelancers" type="radio" value={item.value} label={item.label} key={item.key} />)}
             </Box>
-            <Box>
+            {/* <Box>
             <FieldArray name="project">
               {arrayHelpers => (
                 <Box>
@@ -82,10 +83,14 @@ const FreelancerForm = ({initialValues}) => {
               )}
             </FieldArray>
             </Box>
-            
-            <Box>
-              <MyTextField label="Rate" placeholder="Рейт" name="rateScope" />   
-            </Box>
+             */}
+            {values.freelancers === "rate" ? (
+                        <Box>
+                          <MyTextField label="Рейт" placeholder="Рейт" name="rateScope" />   
+                        </Box>
+            ):          <Box>
+                          <MyTextField label="Фиксированная ставка" placeholder="Фиксированная ставка" name="FixedScope" />   
+                        </Box>}
             <Box> 
               <FormDatePicker />        
             </Box>

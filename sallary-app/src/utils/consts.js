@@ -31,13 +31,20 @@ export const columns = {
         }
     ],
     projectType: [
-        {field: 'Outsourse',label: 'Outsourse', id: '1'},
-        {field: 'Outstaff', label: 'Outstaff', id: '2'},
+        {width: 450 ,id:'1',label: 'Outsourse', field: 'Outsourse', headerName: 'Outsourse', minWidth: 170 , align: 'center', },
+        {width: 450 ,id:'2',label: 'Outstaff', field: 'Outstaff', headerName: 'Outstaff', minWidth: 170 , align: 'center', },
+        // {field: 'Outsourse',label: 'Outsourse', id: '1'},
+        // {field: 'Outstaff', label: 'Outstaff', id: '2'},
     ],
+    // salesType: [
+    //     {field: 'Outband', id:'1'},
+    //     {field: 'Inband', id:'2'},
+    //     {field: 'Free',  id:'3'},
+    // ],
     salesType: [
-        {field: 'Outband', id:'1'},
-        {field: 'Inband', id:'2'},
-        {field: 'Free',  id:'3'},
+        {width: 450 ,id:'1',label: 'Outband', field: 'Outband', headerName: 'Outband', minWidth: 170 , align: 'center', },
+        {width: 450 ,id:'2',label: 'Inband', field: 'Inband', headerName: 'Inband', minWidth: 100 , align: 'center',},
+        {width: 450 ,id:'3',label: 'Free', field: 'Free', headerName: 'Free', minWidth: 100 , align: 'center',},       
     ],
 
     freelancers: [
@@ -89,6 +96,16 @@ export const columns = {
         {width: 150 ,label: 'Клиент', field: 'Customer', headerName: 'Клиент', minWidth: 100 , align: 'center',},
         
     ],
+    total: [
+        {width: 150 ,label: 'Order Number', field: 'Order Number', headerName: 'Order Number', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project Number', field: 'Project Number', headerName: 'Project Number', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Name of Project', field: 'Name of Project', headerName: 'Name of Project', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Customer debt (USD)', field: 'Customer debt (USD)', headerName: 'Customer debt (USD)', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Incomings from Customer (USD)', field: 'Incomings from Customer (USD)', headerName: 'Incomings from Customer (USD)', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project Profit (USD)', field: 'Project Profit (USD)', headerName: 'Project Profit (USD)', minWidth: 170 , align: 'center', },
+        
+    ],
     overall: [
         {width: 150 ,label: 'Order Number', field: 'Order Number', headerName: 'Order Number', minWidth: 170 , align: 'center', },
         {width: 150 ,label: 'Project Number', field: 'Project Number', headerName: 'Project Number', minWidth: 170 , align: 'center', },
@@ -121,11 +138,15 @@ export const radio = {
         {value: 'qa' , label: 'QA' , id: '3'},
         {value: 'designer' , label: 'Дизайнер' , id: '4'},
     ],
+    // freelancers : [
+    //     {value: 'architect' , label: 'Архитектор' , id: '1'},
+    //     {value: 'technicalDirector' , label: 'Технический консультант' , id: '2'},
+    //     {value: 'himself' , label: 'Делает задания сам' , id: '3'},
+    //     {value: 'submits' , label: 'Передаёт задания нашему разработчику' , id: '4'},
+    // ],
     freelancers : [
-        {value: 'architect' , label: 'Архитектор' , id: '1'},
-        {value: 'technicalDirector' , label: 'Технический консультант' , id: '2'},
-        {value: 'himself' , label: 'Делает задания сам' , id: '3'},
-        {value: 'submits' , label: 'Передаёт задания нашему разработчику' , id: '4'},
+        {value: 'rate' , label: 'Рейт' , id: '1'},
+        {value: 'fixedRate' , label: 'Фиксированная ставка' , id: '2'},
     ],
     countries : [
         {value: 'belarus', label: 'Беларусь', id: '1'},
@@ -193,14 +214,14 @@ export const dateSelector = {
     {id:"12", label:"Декабрь",value:"mounth"},
     ],
     years: [
-    {id:"1", label:"2018", value:"year"},
-    {id:"2", label:"2019", value:"year"},
-    {id:"3", label:"2020", value:"year"},
-    {id:"4", label:"2021", value:"year"},
-    {id:"5", label:"2022", value:"year"},
-    {id:"6", label:"2023", value:"year"},
-    {id:"7", label:"2024", value:"year"},
-    {id:"8", label:"2025", value:"year"},
+    {id:"1", label:"2018", name:"2018", value:"year"},
+    {id:"2", label:"2019", name:"2019", value:"year"},
+    {id:"3", label:"2020", name:"2020", value:"year"},
+    {id:"4", label:"2021", name:"2021", value:"year"},
+    {id:"5", label:"2022", name:"2022", value:"year"},
+    {id:"6", label:"2023", name:"2023", value:"year"},
+    {id:"7", label:"2024", name:"2024", value:"year"},
+    {id:"8", label:"2025", name:"2025", value:"year"},
     ],
 }
 // Январь [yan-VAR’] January

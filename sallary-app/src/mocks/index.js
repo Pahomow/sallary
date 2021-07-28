@@ -101,19 +101,16 @@ export const projectMangers = [
   ]
 
 export const projectsType = [
-{field: 'Outsource', value: '20%', id:'1'},
-{field: 'Outstaff', value: '25%', id:'2'},
+{ Outsourse: '20%', Outstaff: '25%' ,id:'1'},
 ]
 
 export const salesType = [  
-  {field: 'Outband', value: '20%', id:'1'},
-  {field: 'Inband', value: '25%', id:'2'},
-  {field: 'Free', value: '30%', id:'3'},
+  { Outband: '20%',Inband: '25%', Free: '30%', id:'1', align: 'center',},
   ]
 export const overall = [  
-  {field: 'Outband', value: '20%', id:'1'},
-  {field: 'Inband', value: '25%', id:'2'},
-  {field: 'Free', value: '30%', id:'3'},
+  {field: 'Outband', Outband: '20%', id:'1'},
+  {field: 'Inband', Inband: '25%', id:'2'},
+  {field: 'Free', Free: '30%', id:'3'},
   ]  
 
 export const freelancers = [
