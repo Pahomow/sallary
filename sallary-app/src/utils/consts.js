@@ -28,7 +28,6 @@ export const columns = {
         title:'ЗП $',
         minWidth: 170,
         align: 'center',
-        format: (value) => value.toLocaleString('en-US'),
         }
     ],
     projectType: [
@@ -65,18 +64,18 @@ export const columns = {
         {width: 150 ,label: 'Freelancer bonus', field: 'FreelancerBonus', headerName: 'Freelancer bonus', minWidth: 170 , align: 'center', },
         {width: 150 ,label: 'Payed', field: 'Payed', headerName: 'Payed', minWidth: 170 , align: 'center', },
     ],
+    customers: [
+        {width: 150 ,label: 'Customer',title: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project', title: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Status',  title: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Entity',  title: 'Entity', field: 'Entity', headerName: 'Юридическое лицо', minWidth: 100 , align: 'center',},
+    ],
     // customers: [
     //     {width: 150 ,label: 'Customer',title: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
     //     {width: 150 ,label: 'Project', title: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
     //     {width: 150 ,label: 'Status',  title: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
     //     {width: 150 ,label: 'Entity',  title: 'Entity', field: 'Entity', headerName: 'Юридическое лицо',type: 'numeric', minWidth: 100 , align: 'center',},
     // ],
-    customers: [
-        {width: 150 ,label: 'Customer',title: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
-        {width: 150 ,label: 'Project', title: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
-        {width: 150 ,label: 'Status',  title: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
-        {width: 150 ,label: 'Entity',  title: 'Entity', field: 'Entity', headerName: 'Юридическое лицо',type: 'numeric', minWidth: 100 , align: 'center',},
-    ],
     
     salesManager: [
         {width: 150 ,label: 'SM', field: 'SM', headerName: 'SM', minWidth: 170 , align: 'center', },

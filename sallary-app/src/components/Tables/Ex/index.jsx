@@ -73,35 +73,47 @@ console.log(column, "data", rows)
         columns={columns}
         editable={{
           onRowAdd: (newRow) => new Promise((resolve, reject) => {
-            const updatedRows = [...data, { id: Math.floor(Math.random() * 100), ...newRow }]
-            setData(updatedRows)
-            resolve()
+            setTimeout(()=> {
+              const updatedRows = [...data, { id: Math.floor(Math.random() * 100), ...newRow }]
+              setData(updatedRows)
+              resolve()
+              
+            },1000)
 
           }),
           onRowDelete: selectedRow => new Promise((resolve, reject) => {
-            const index = selectedRow.tableData.id;
-            const updatedRows = [...data]
-            updatedRows.splice(index, 1)
-            setData(updatedRows)
-            resolve()
+            setTimeout(()=> {
+              
+              const index = selectedRow.tableData.id;
+              const updatedRows = [...data]
+              updatedRows.splice(index, 1)
+              setData(updatedRows)
+              resolve()
+            },2000)
           }),
           onRowUpdate:(updatedRow,oldRow)=>new Promise((resolve,reject)=>{
-            const index=oldRow.tableData.id;
-            const updatedRows=[...data]
-            updatedRows[index]=updatedRow
-            setData(updatedRows)
-            resolve()
+            setTimeout(()=> {
+              
+              const index=oldRow.tableData.id;
+              const updatedRows=[...data]
+              updatedRows[index]=updatedRow
+              setData(updatedRows)
+              resolve()
+            },3000)
           }),
           onBulkUpdate:selectedRows=>new Promise((resolve,reject)=>{
-            const rows=Object.values(selectedRows)
-            const updatedRows=[...data]
-            let index;
-            rows.map(emp=>{
-               index=emp.oldData.tableData.id
-               updatedRows[index]=emp.newData
-            })
-            setData(updatedRows)
-            resolve()
+            setTimeout(()=> {
+              
+              const rows=Object.values(selectedRows)
+              const updatedRows=[...data]
+              let index;
+              rows.map(emp=>{
+                 index=emp.oldData.tableData.id
+                 updatedRows[index]=emp.newData
+              })
+              setData(updatedRows)
+              resolve()
+            },2500)
           })
 
         }}

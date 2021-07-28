@@ -5,9 +5,8 @@ import {  customers  } from "../../mocks"
 const AccoutingPage = () => {
 return(
     <div>
-        <TableUpper />
-        {/* <TableEditable rows={customers} column={columns.customers}/> */}
-        AccoutingPage
+        {/* <TableUpper /> */}
+        <TableEditable rows={customers} column={columns.customers}/>
     </div>
 )
 }

@@ -47,29 +47,29 @@ const tableIcons = {
 
 const TableUpper = () => {
   
-    // const [columns, setColumns] = useState([
-    //   { title: 'Name', field: 'name' },
-    //   { title: 'Surname', field: 'surname', initialEditValue: 'initial edit value' },
-    //   { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-    //   {
-    //     title: 'Birth Place',
-    //     field: 'birthCity',
-    //     lookup: { 34: 'İstanbul', 63: 'Şanlıurfa', 41: 'ddd' },
-    //   },
-    // ]);
-    // const [data, setData] = useState([
-    //   { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-    //   { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-    //   { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 41 },
-    // ]);
-    const [column, setColumn] = useState(columns.customers);
-    const [data, setData] = useState(customers);
+    const [columns, setColumns] = useState([
+      { title: 'Name', field: 'name' },
+      { title: 'Surname', field: 'surname', initialEditValue: 'initial edit value' },
+      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+      {
+        title: 'Birth Place',
+        field: 'birthCity',
+        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa', 41: 'ddd' },
+      },
+    ]);
+    const [data, setData] = useState([
+      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+      { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+      { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 41 },
+    ]);
+    // const [column, setColumn] = useState(columns.customers);
+    // const [data, setData] = useState(customers);
     
     return (
       <MaterialTable
         icons={tableIcons}
         title="Cell Editable Preview"
-        columns={column}
+        columns={columns}
         data={data}
         cellEditable={{
           onCellEditApproved: (newValue, oldValue, rowData, columnDef) => {
@@ -77,24 +77,22 @@ const TableUpper = () => {
 
               console.log("rowdata", rowData); 
               console.log("state", data);
-              const indexDa=rowData.tableData.id;
-            //   const arr = data.map(item => item.id === rowData.tableData.id ? console.log('true'): console.log('false') )
-            //   console.log(index);
-            //   setData(arr)  
-              data.forEach((item , index) =>   
-                  item.tableData.id === rowData.tableData.id ? Object.values(item).forEach(item => item === oldValue ? console.log(newValue) : console.log(oldValue)): item
-            //    index === rowData.tableData.id ? 
-                //   console.log(index)
-                //   console.log(item.tableData.id)
-                //   console.log(rowData.tableData.id)
+            //   const indexDa=rowData.tableData.id;
+            // //   const arr = data.map(item => item.id === rowData.tableData.id ? console.log('true'): console.log('false') )
+            // //   console.log(index);
+            // //   setData(arr)  
+            //   data.forEach((item , index) =>   
+            //       item.tableData.id === rowData.tableData.id ? Object.values(item).forEach(item => item === oldValue ? console.log(newValue) : console.log(oldValue)): item
+            // //    index === rowData.tableData.id ? 
+            //     //   console.log(index)
+            //     //   console.log(item.tableData.id)
+            //     //   console.log(rowData.tableData.id)
                   
-              )
-
-
+            //   )
               console.log('newValue: ', newValue);
               console.log("oldValue:" ,oldValue);
               console.log("columnDef" ,columnDef.field);     
-            
+              resolve()
             });
           }
         }}
