@@ -1,8 +1,5 @@
 import OverallInfoForm from "../../components/Forms/OverallInfoForm"
 import { Box } from "@material-ui/core"
-// import MultipleSelectorForm from "../../components/TechnologyCheckboxUpper"
-// import Table from "../../components/Tables/Table"
-// import ButtonComponent from "../../components/Button"
 import {selectorInput,columns} from '../../utils/consts'
 import {overall} from '../../mocks'
 import Table from "../../components/Tables/Table"
@@ -42,10 +39,9 @@ const OverAllPage = () => {
     }
     return(
         <Box>
-            <OverallInfoForm initialValues={initialValues} selector ={selectorInput} />
-            {/* <MultipleSelectorForm/>
-            <ButtonComponent/>
-            <Table/> */}
+            <Box>
+                <OverallInfoForm initialValues={initialValues} selector ={selectorInput} />
+            </Box>
             <Box>
                 <Table rows={overall} columns={columns.overall}/>
             </Box>

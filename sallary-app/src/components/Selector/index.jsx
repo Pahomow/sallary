@@ -1,19 +1,17 @@
 import { Field, FieldArray} from "formik";
 import { Select, MenuItem, Box} from "@material-ui/core";
 import TypographyComponent from "../Typography";
-const SelectorForm = ({initialState , selector , label,name }) => {
-
+const SelectorForm = ({ selector , label, name }) => {
     return (
-        <>
+        <Box>
         {label? <TypographyComponent title={label} /> : null}
-        {console.log(name)}
         <FieldArray name={name}>
         {arrayHelpers => (
         <Box>
                 <Field
+                
                     key={name}
                     name={name} 
-                    // type={name}
                     as={Select}
                 >
                     {selector.map(item => <MenuItem key={item.id} value={item.value}>{item.label}</MenuItem>)}
@@ -21,12 +19,8 @@ const SelectorForm = ({initialState , selector , label,name }) => {
        </Box>
         )}
        </FieldArray>
-    </>
+    </Box>
     )
 }
 
 export default SelectorForm
-
-{/* { upgraded ? <ButtonComponent title="x" onClick={() => arrayHelpers.remove(index)}/> : null }      
-{ upgraded ? <ButtonComponent title="Добавить проект"  onClick={() => arrayHelpers.push({type: "Project 1", id: "" + Math.random() })}/>: null}
-{console.log(arrayHelpers)} */}

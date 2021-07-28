@@ -9,7 +9,6 @@ import TypographyComponent from "../Typography";
 export const MyTextField = ({
     placeholder,
     label,
-    // name,
     ...props
   }) => {
     const [field, meta] = useField(props);
@@ -20,8 +19,6 @@ export const MyTextField = ({
       <TextField
         placeholder={placeholder}
         name={props.name}
-        // variant="outlined"
-        // label={label}
         {...field}
         helperText={errorText}
         error={!!errorText}

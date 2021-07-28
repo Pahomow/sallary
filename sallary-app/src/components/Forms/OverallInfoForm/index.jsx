@@ -1,15 +1,16 @@
 import React from "react";
 import { Formik, Form,} from "formik";
 import * as yup from "yup";
-import MyRadio from '../../RadioBox'
 import {MyTextField} from '../../MyTextField'
-import {radio , selector} from '../../../utils/consts'
-// import ButtonComponent from "../../Button";
 import SelectorForm from '../../Selector'
 import {Box, Button,Grid} from '@material-ui/core';
 import InputBox from "../../InputBox";
 import FormDatePicker from '../../TimePickers'
 import CheckboxComponent from "../../Checkbox";
+import {knowledgeStack} from '../../../utils/consts'
+import TypographyComponent from "../../Typography";
+
+
 const validationSchema = yup.object({
   firstName: yup
     .string()
@@ -40,9 +41,6 @@ const OverallInfoForm = ({initialValues,selector}) => {
                 <Box>
                   <MyTextField label="Номер проекта" placeholder="Введите порядковый номер" name="name" />
                 </Box>   
-                {/* <Box>
-                {radio.team.map(item =>  <MyRadio name="employers" type="radio" value={item.value} label={item.label} key={item.key} />)}              
-                </Box>  */}
                 <Box>
                   <SelectorForm label="Клиент" name="select" initialValues={values.select} selector={selector.team}/>                         
                 </Box> 
@@ -50,6 +48,7 @@ const OverallInfoForm = ({initialValues,selector}) => {
                   <SelectorForm label="Название проекта" name="nameProject" initialValues={values.select} selector={selector.team}/>                         
                 </Box>
                 <Box>
+                  <TypographyComponent title="Дата старта проекта"/>
                   <FormDatePicker/>
                 </Box>
                 <Box>
@@ -67,29 +66,25 @@ const OverallInfoForm = ({initialValues,selector}) => {
               </Grid>
 
               <Grid item xs={6}>
-                <CheckboxComponent state={initialValues}/>
-
+                <CheckboxComponent arrayFromSelect={knowledgeStack}/>
                 {selector.team.map((item) => (
                 <InputBox initialValues={values} 
+                          key={item.id}
                           label={item.label}
                           name={item.name} 
                           typographyComponentName={item.label} 
                           value={item.value} 
                           numberOfEmployees={selector.values}/>
                   ))}
-                
               </Grid>
             </Grid>
-            {/* <Box>
-              <MyTextField label="Данные о ЗП" placeholder="Введите данные о зарплате" name="data" />
-            </Box>              */}
             <Box>
               <Button disabled={isSubmitting} type="submit">
                 submit
               </Button>
             </Box>
-            <pre>{JSON.stringify(values, null, 2)}</pre>
-            <pre>{JSON.stringify(errors, null, 2)}</pre>  
+            {/* <pre>{JSON.stringify(values, null, 2)}</pre>
+            <pre>{JSON.stringify(errors, null, 2)}</pre>   */}
           </Form>
         )}
       </Formik>

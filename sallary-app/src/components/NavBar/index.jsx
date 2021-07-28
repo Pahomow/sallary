@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, Tabs , Tab} from '@material-ui/core'
 import { privateRoutes } from '../../routes';
@@ -14,9 +14,9 @@ const useStyles = makeStyles({
 export default function NavBar() {
   const history = useHistory()
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-  console.log(value);
-  const handleChange = (event, newValue) => {
+  const [value, setValue] = useState(0);
+  
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
   const handleClick = (e , item) => {

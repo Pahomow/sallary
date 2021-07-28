@@ -20,11 +20,12 @@ export const user = true
 
 export const columns = {
     team: [
-        {width: 150, field: 'Name', id: 'Name', label: 'ФИО', minWidth: 170 , align: 'center', },
-        {width: 150, field: 'level', id: 'level', label: 'Уровень', minWidth: 100 , align: 'center',},
+        {width: 150, field: 'Name', id: 'Name', label: 'ФИО', title:'ФИО', minWidth: 170 , align: 'center', },
+        {width: 150, field: 'level', id: 'level', label: 'Уровень',title:'Уровень', minWidth: 100 , align: 'center',},
         {width: 150, field: 'sallary',
         id: 'sallary',
         label: 'ЗП $',
+        title:'ЗП $',
         minWidth: 170,
         align: 'center',
         format: (value) => value.toLocaleString('en-US'),
@@ -64,12 +65,19 @@ export const columns = {
         {width: 150 ,label: 'Freelancer bonus', field: 'FreelancerBonus', headerName: 'Freelancer bonus', minWidth: 170 , align: 'center', },
         {width: 150 ,label: 'Payed', field: 'Payed', headerName: 'Payed', minWidth: 170 , align: 'center', },
     ],
+    // customers: [
+    //     {width: 150 ,label: 'Customer',title: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
+    //     {width: 150 ,label: 'Project', title: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+    //     {width: 150 ,label: 'Status',  title: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
+    //     {width: 150 ,label: 'Entity',  title: 'Entity', field: 'Entity', headerName: 'Юридическое лицо',type: 'numeric', minWidth: 100 , align: 'center',},
+    // ],
     customers: [
-        {width: 150 ,label: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
-        {width: 150 ,label: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
-        {width: 150 ,label: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
-        {width: 150 ,label: 'Entity', field: 'Entity', headerName: 'Юридическое лицо', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Customer',title: 'Customer', field: 'Customer', headerName: 'Customer', minWidth: 170 , align: 'center', },
+        {width: 150 ,label: 'Project', title: 'Project', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Status',  title: 'Status', field: 'Status', headerName: 'Статус', minWidth: 100 , align: 'center',},
+        {width: 150 ,label: 'Entity',  title: 'Entity', field: 'Entity', headerName: 'Юридическое лицо',type: 'numeric', minWidth: 100 , align: 'center',},
     ],
+    
     salesManager: [
         {width: 150 ,label: 'SM', field: 'SM', headerName: 'SM', minWidth: 170 , align: 'center', },
         {width: 150 ,label: 'Проект', field: 'Project', headerName: 'Проект', minWidth: 100 , align: 'center',},

@@ -11,7 +11,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const FormDatePicker = (props) => {
   return (
     <Field name="startDate">
-      {({ field, meta, form: { setFieldValue } }) => {
+      {({ field, form: { setFieldValue } }) => {
         return (
           <DatePicker
             {...field}

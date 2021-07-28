@@ -131,7 +131,7 @@ export const freelancers = [
 export const customers = [
   { id: 1, Customer: "Alex", Project: "WorldWibe" ,Status: "Active", Entity: "uk"},
   { id: 2, Customer: "Oleg", Project: "Fls" ,Status: "Active", Entity: "rb"},
-  { id: 3, Customer: "Igor", Project: "Give" ,Status: "Not Active", Entity: "rb"},
+  { id: 3, Customer: "Igor", Project: "Give" ,Status: "Not Active", Entity: "1"},
   { id: 4, Customer: "Maks", Project: "Vision" ,Status: "Active", Entity: "uk"},
 ]
 export const salesManager = [

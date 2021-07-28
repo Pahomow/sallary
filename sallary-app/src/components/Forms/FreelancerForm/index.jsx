@@ -7,9 +7,8 @@ import FormDatePicker from "../../TimePickers"
 import {MyTextField} from "../../MyTextField"
 import ButtonComponent from '../../Button'
 import MyRadio from '../../RadioBox'
-import { radio ,selector} from '../../../utils/consts'
+import { radio ,selector , knowledgeStack} from '../../../utils/consts'
 import Box from '@material-ui/core/Box';
-import TechnologyCheckbox from "../../Usefull/TechnologyCheckboxUpper";
 import CheckboxComponent from "../../Checkbox";
 
 
@@ -39,11 +38,8 @@ const FreelancerForm = ({initialValues}) => {
             <Box>
               <MyTextField label="Freelancer" placeholder="Фамилия Имя Отчество" name="freelancerName" />
             </Box>
-            {/* <Box>
-              <TechnologyCheckbox state={initialValues} name="multiSelect"/>
-            </Box> */}
             <Box>
-              <CheckboxComponent state={initialValues}/>
+              <CheckboxComponent arrayFromSelect={knowledgeStack}/>
             </Box>
             <Box>
               {radio.freelancers.map(item =>  <MyRadio name="freelancers" type="radio" value={item.value} label={item.label} key={item.key} />)}
@@ -60,7 +56,6 @@ const FreelancerForm = ({initialValues}) => {
                           key={project.id}
                           name={`project.${index}.type`}
                           select="value"
-                          // select={`project.${index}.type`}
                           type="select"
                           as={Select}
                         >

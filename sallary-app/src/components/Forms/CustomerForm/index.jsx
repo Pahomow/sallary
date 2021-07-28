@@ -1,14 +1,14 @@
 import React from "react";
-import { Formik, Form,} from "formik";
-import * as yup from "yup";
+import {ListFormik} from "../../ListFormik";
 import MyRadio from '../../RadioBox'
 import {MyTextField} from '../../MyTextField'
-import {radio , selector} from '../../../utils/consts'
 import SelectorForm from '../../Selector'
-import {Box} from '@material-ui/core';
 import ButtonComponent from "../../Button";
 import TypographyComponent from "../../Typography";
-import {ListFormik} from "../../ListFormik";
+import * as yup from "yup";
+import { Formik, Form,} from "formik";
+import {Box} from '@material-ui/core';
+import {radio , selector} from '../../../utils/consts'
 
 const validationSchema = yup.object({
   firstName: yup
@@ -46,15 +46,15 @@ const CustomerForm = ({initialValues}) => {
               <MyTextField label="Добавить новый проект" placeholder="Введите ФИО нового сотрудника" name="name" />
             </Box>
             <Box>
-                <ButtonComponent title="Добавить"/>
+              <ButtonComponent title="Добавить"/>
             </Box>  
             <Box>
               <Box>
-              <MyTextField label="Добавить нового Клиента " placeholder="Добавить нового Клиента" name="client " />
+                <MyTextField label="Добавить нового Клиента " placeholder="Добавить нового Клиента" name="client " />
               </Box>
               <Box>
-             <TypographyComponent title="Сотрудничает с юридическим лицом:"/>   
-            {radio.countries.map(item =>  <MyRadio name="countries" type="radio" value={item.value} label={item.label} key={item.key} />)}              
+                <TypographyComponent title="Сотрудничает с юридическим лицом:"/>   
+                {radio.countries.map(item =>  <MyRadio name="countries" type="radio" value={item.value} label={item.label} key={item.key} />)}              
               </Box>
             </Box>
             <Box>
