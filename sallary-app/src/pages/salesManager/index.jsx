@@ -9,12 +9,65 @@ const SalesManagerPage = () => {
         data: "",
         employers: '',
         select:'junior+',
+        sm: [
+          {type: 'Юля'}
+      ],
+      projects: [
+        {
+          name: 'alex',
+          email: 'sdasda',
+        },
+        {
+          name: 'Oleg',
+          email: 'sdasda',
+        },
+        {
+          name: 'Ira',
+          email: 'sdasda',
+        },
+        {
+          name: 'al',
+          email: 'sdasda',
+        },
+        {
+            name: 'alex',
+            email: 'sdasda',
+          },
+          {
+            name: 'Oleg',
+            email: 'sdasda',
+          },
+          {
+            name: 'Ira',
+            email: 'sdasda',
+          },
+          {
+            name: 'al',
+            email: 'sdasda',
+          },
+          {
+            name: 'alex',
+            email: 'sdasda',
+          },
+          {
+            name: 'Oleg',
+            email: 'sdasda',
+          },
+          {
+            name: 'Ira',
+            email: 'sdasda',
+          },
+          {
+            name: 'al',
+            email: 'sdasda',
+          }, 
+      ],
       }
     return(
         <Box>
             <Grid container spacing={1}>
                 <Grid item xs={7}>
-                    <SalesManagerForm/>
+                    <SalesManagerForm initialValues={initialValues}/>
                 </Grid>
 
                 <Grid item xs={5}>

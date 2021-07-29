@@ -10,6 +10,56 @@ const initialValues = {
         client: 'belarus',
         select: "junior+",
         remove: "senior",
+        projects: [
+            {
+              name: 'alex',
+              email: 'sdasda',
+            },
+            {
+              name: 'Oleg',
+              email: 'sdasda',
+            },
+            {
+              name: 'Ira',
+              email: 'sdasda',
+            },
+            {
+              name: 'al',
+              email: 'sdasda',
+            },
+            {
+                name: 'alex',
+                email: 'sdasda',
+              },
+              {
+                name: 'Oleg',
+                email: 'sdasda',
+              },
+              {
+                name: 'Ira',
+                email: 'sdasda',
+              },
+              {
+                name: 'al',
+                email: 'sdasda',
+              },
+              {
+                name: 'alex',
+                email: 'sdasda',
+              },
+              {
+                name: 'Oleg',
+                email: 'sdasda',
+              },
+              {
+                name: 'Ira',
+                email: 'sdasda',
+              },
+              {
+                name: 'al',
+                email: 'sdasda',
+              }, 
+          ],
 }   
     return(
         <Grid container spacing={1}>

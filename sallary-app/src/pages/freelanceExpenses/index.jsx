@@ -6,8 +6,8 @@ import { columns , dateSelector} from "../../utils/consts"
 
 const FreelanceExpenses = () => {
     const initialValues = {
-        year: "2020",
-        mounth:"may",
+        years: "2020",
+        mounths:"May",
       }
     return (
         <Box>

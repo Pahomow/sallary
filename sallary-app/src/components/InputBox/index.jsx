@@ -10,7 +10,7 @@ const InputBox = ({initialValues ,name ,typographyComponentName,numberOfEmployee
    return Array(value).fill(null).map(item => (
       <Box>
         <Box>
-        In developing
+         In developing
         </Box>
       </Box>
    ))}

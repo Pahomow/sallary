@@ -45,7 +45,6 @@ const TeamForm = ({initialValues}) => {
             <MyTextField label="Данные о ЗП" placeholder="Введите данные о зарплате" name="data" />
             </Box>             
             <Box>
-              {/* <ButtonComponent disabled={isSubmitting}  title= 'Добавить' /> */}
               <Button disabled={isSubmitting} type="submit">
                 submit
               </Button>

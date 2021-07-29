@@ -5,9 +5,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@material-ui/core/Grid';
 import DeleteIcon from '@material-ui/icons/Delete';
-import TypographyComponent from '../Typography';
+import TypographyComponent from '../../Typography';
 import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +38,7 @@ function generate(element) {
   );
 }
 
-const ListComponent = ({remove}) => {
+const ListComponent = ({remove ,transfer, title }) => {
   const classes = useStyles();
   const handleclick = () => {
     console.log("click");
@@ -45,7 +46,7 @@ const ListComponent = ({remove}) => {
   return (
     <Box>  
       <Box>
-        <TypographyComponent title="Существующие проекты"/>
+        <TypographyComponent title={title}/>
       </Box>
     <Box className={classes.root}>
       <Grid container spacing={2}>
@@ -59,12 +60,18 @@ const ListComponent = ({remove}) => {
                   <ListItemText
                     primary="Single-line item"         
                   />
-                  {remove && <ListItemSecondaryAction>
+                  {remove && (
+                  <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
                       <DeleteIcon onClick={handleclick}/>
                     </IconButton>
-                  </ListItemSecondaryAction>}
-
+                  </ListItemSecondaryAction>)}
+                  {transfer && (
+                  <ListItemSecondaryAction>
+                    <IconButton edge="end" aria-label="transfer">
+                      <ArrowForwardIcon onClick={handleclick}/>
+                    </IconButton>
+                  </ListItemSecondaryAction>)}  
                 </ListItem>,
               )}
             </List>

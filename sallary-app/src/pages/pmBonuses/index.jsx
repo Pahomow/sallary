@@ -6,8 +6,8 @@ import  TypographyComponent  from '../../components/Typography';
 import DataSelector from "../../components/YearMounthsSelector";
 const PmBonuses = () => {
     const initialValues = {
-        year: "2020",
-        mounth:"may",
+        years: "2020",
+        mounths:"May",
       }
     return (
         <Grid>

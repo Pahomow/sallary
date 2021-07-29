@@ -22,8 +22,8 @@ import DataSelector from "../../components/YearMounthsSelector";
 import { columns , dateSelector} from "../../utils/consts"
 const SmBonuses = () => {
     const initialValues = {
-        year: "2020",
-        mounth:"may",
+        years: "2020",
+        mounths:"May",
       }
     return (
         <Grid>

@@ -12,7 +12,7 @@ import { MyTextField } from "../../MyTextField";
 import ButtonComponent from "../../Button";
 import SelectorForm from "../../Selector";
 import { managers } from "../../../mocks";
-import ListComponent from "../../List";
+import {ListFormik} from "../../ListFormik";
 const validationSchema = yup.object({
   firstName: yup
     .string()
@@ -25,17 +25,12 @@ const validationSchema = yup.object({
   )
 });
 
-const SalesManagerForm = () => {
+const SalesManagerForm = ({initialValues}) => {
   return (
     <Box>
       <Formik
         validateOnChange={true}
-        initialValues={{
-          name: "",
-          sm: [
-            {type: 'Юля'}
-        ]
-        }}
+        initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(data, { setSubmitting }) => {
           setSubmitting(true);
@@ -47,7 +42,7 @@ const SalesManagerForm = () => {
           <Form>
             <SelectorForm initialState={values.sm} selector={managers.sm} label="Sales manager"/>  
             <Box>
-              <ListComponent/>  
+              <ListFormik name="projects" initialValues={values.projects}/>
             </Box>
             <Box>
               <SelectorForm initialState={values.sm} selector={managers.sm} label="Добавить новый проект"/> 

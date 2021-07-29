@@ -3,6 +3,7 @@ import { FieldArray } from 'formik';
 import {List ,Button ,Dialog, DialogActions,DialogContent,DialogTitle, Box, ListItemText ,ListItem, ListItemIcon } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from '@material-ui/core/styles';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const ListFormik = ({initialValues, name, removeButton}) => {
+export const ListFormik = ({initialValues, name, transfer, removeButton}) => {
     const [showDialog,setShowDialog] = useState(false)
     const [currentIndex,setCurrentIndex] = useState(null)
     const classes = useStyles();
@@ -52,6 +53,10 @@ export const ListFormik = ({initialValues, name, removeButton}) => {
                             {removeButton && (
                             <ListItemIcon onClick={() => openDialogClick(index)}> 
                                 <DeleteIcon />
+                            </ListItemIcon>)}
+                            {transfer && (
+                            <ListItemIcon onClick={() => openDialogClick(index)}> 
+                                <ArrowForwardIcon />
                             </ListItemIcon>)}
                         </ListItem>  
                     </div>

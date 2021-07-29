@@ -1,13 +1,12 @@
 import React from "react";
 import {Formik,Field,Form,FieldArray} from "formik";
-import {Button,Select,MenuItem} from "@material-ui/core";
 // import useStyles from './style'
 import * as yup from "yup";
 import FormDatePicker from "../../TimePickers"
 import {MyTextField} from "../../MyTextField"
 import ButtonComponent from '../../Button'
 import MyRadio from '../../RadioBox'
-import { radio ,selector , knowledgeStack} from '../../../utils/consts'
+import { radio , knowledgeStack} from '../../../utils/consts'
 import Box from '@material-ui/core/Box';
 import CheckboxComponent from "../../Checkbox";
 
@@ -45,45 +44,6 @@ const FreelancerForm = ({initialValues}) => {
             <Box>
               {radio.freelancers.map(item =>  <MyRadio name="freelancers" type="radio" value={item.value} label={item.label} key={item.key} />)}
             </Box>
-            {/* <Box>
-            <FieldArray name="project">
-              {arrayHelpers => (
-                <Box>
-                  {values.project.map((project, index) => {
-                    console.log(values)
-                    return (
-                      <Box key={project.id}>
-                        <Field
-                          key={project.id}
-                          name={`project.${index}.type`}
-                          select="value"
-                          type="select"
-                          as={Select}
-                        >
-                        {selector.freelancers.map(item => <MenuItem key={item.id} value={item.value}>{item.label}</MenuItem>)}
-                        </Field>
-                        <Button onClick={() => arrayHelpers.remove(index)}>
-                          x
-                        </Button>
-                      </Box>
-                    );
-                  })}
-                  <Button
-                   variant="outlined"
-                    onClick={() =>
-                      arrayHelpers.push({
-                        type: "Project",
-                        id: "" + Math.random()
-                      })
-                    }
-                  >
-                    Добавить проект
-                  </Button>
-                </Box>
-              )}
-            </FieldArray>
-            </Box>
-             */}
             {values.freelancers === "rate" ? (
                         <Box>
                           <MyTextField label="Рейт" placeholder="Рейт" name="rateScope" />   

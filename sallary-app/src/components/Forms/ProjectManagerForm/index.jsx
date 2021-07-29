@@ -1,23 +1,12 @@
-// const ProjectManagerForm = ({initialValues, projectManagers}) => {
-//     return (
-//      <>
-//      1
-//      </>   
-//     )
-// }
-// export default ProjectManagerForm
-
 import React from "react";
 import { Formik, Form,} from "formik";
 import * as yup from "yup";
-import MyRadio from '../../RadioBox'
 import {MyTextField} from '../../MyTextField'
-import {radio , selector} from '../../../utils/consts'
+import {selector} from '../../../utils/consts'
 import SelectorForm from '../../Selector'
 import {Box} from '@material-ui/core';
-import ListComponent from "../../List";
+import {ListFormik} from "../../ListFormik";
 import ButtonComponent from "../../Button";
-import TypographyComponent from "../../Typography";
 
 const validationSchema = yup.object({
   firstName: yup
@@ -28,7 +17,7 @@ const validationSchema = yup.object({
   .number()
 });
 //
-const ProjectManagerForm = ({initialValues, projectManagers}) => {
+const ProjectManagerForm = ({initialValues}) => {
 
   return (
       <Box>
@@ -49,7 +38,7 @@ const ProjectManagerForm = ({initialValues, projectManagers}) => {
                 <SelectorForm label="Project manager" name="select" initialState={values.client} selector={selector.team}/>                         
             </Box>
             <Box>
-                <ListComponent/>
+               <ListFormik name="projects" initialValues={values.projects}/>
             </Box>
             <Box>
                 <SelectorForm label="Добавить новый проект  " name="select" initialState={values.client} selector={selector.team}/>                         
@@ -61,13 +50,14 @@ const ProjectManagerForm = ({initialValues, projectManagers}) => {
             <Box>
                 <ButtonComponent title="Добавить"/>
             </Box>  
-            {/* <Box>
-             <TypographyComponent title="Сотрудничает с юридическим лицом:"/>   
-            {radio.countries.map(item =>  <MyRadio name="countries" type="radio" value={item.value} label={item.label} key={item.key} />)}              
-            </Box> */}
-            {/* <Box>
-                <ButtonComponent title="Добавить"/>
-            </Box> */}
+
+            <Box>
+              <SelectorForm label="От" name="remove" initialState={values.removeClient} selector={selector.team}/>                      
+              <SelectorForm label="Кому" name="remove" initialState={values.removeClient} selector={selector.team}/>                          
+              <ListFormik transfer name="projects" initialValues={values.projects}/>
+            </Box>
+
+
             <Box>
                 <SelectorForm label="Удалить PM" name="remove" initialState={values.removeClient} selector={selector.team}/>                         
             </Box>              

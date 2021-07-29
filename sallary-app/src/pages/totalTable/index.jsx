@@ -6,8 +6,8 @@ import { projectsType } from "../../mocks"
 
 const TotalTable = () => {
     const initialValues = {
-        year: "2020",
-        mounth:"may",
+        years: "2020",
+        mounths:"May",
       }
     return (
         <Box>
