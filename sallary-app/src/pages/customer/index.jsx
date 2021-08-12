@@ -1,7 +1,5 @@
 import { Box, Grid } from "@material-ui/core"
 import CustomerForm from "../../components/Forms/CustomerForm"
-
-import SimpleTable from "../../components/Tables/SimpleTable"
 import Table from "../../components/Tables/Table"
 import {  projects, customers  } from "../../mocks"
 import { columns } from "../../utils/consts"
@@ -73,7 +71,6 @@ const initialValues = {
                 
                 <Grid  item xs={5}>
                     <Table columns={columns.customers} rows= {customers }/>
-                    {/* <SimpleTable rows={salesType} columns={columns.salesType}/> */}
                 </Grid>
             </Grid>
         </Box>

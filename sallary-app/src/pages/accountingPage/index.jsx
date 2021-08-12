@@ -5,9 +5,6 @@ import { freelanceExpenses } from "../../mocks"
 import { Box } from '@material-ui/core'
 import DataSelector from '../../components/YearMounthsSelector'
 import { columns , dateSelector} from "../../utils/consts"
-import TableEditable from "../../components/Tables/Ex"
-import TableUpper from "../../components/Tables/TableV"
-import {  customers  } from "../../mocks"
 
 const AccoutingPage = () => {
     const initialValues = {
@@ -22,8 +19,6 @@ const AccoutingPage = () => {
             <Box>
                     <Table columns={columns.freelanceExpenses} rows= {freelanceExpenses }/>
             </Box>
-                    {/* <TableUpper /> */}
-        {/* <TableEditable rows={customers} column={columns.customers}/> */}
         </Box>
     )
 }

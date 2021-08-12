@@ -31,7 +31,7 @@ export default function NavBar() {
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
-        centered
+        // centered
       >
         {privateRoutes.map(item => {
           return  <Tab onClick={(event =>  handleClick(event , item))} key={item.path} label= {item.name} />

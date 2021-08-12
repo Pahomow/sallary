@@ -23,5 +23,10 @@ const InputBox = ({initialValues ,name ,typographyComponentName,numberOfEmployee
         </Box> 
         )
 };
-
+// const obj = {
+// 'prop1': 'foo',
+// 'prop2': 'bar'
+//}
+//console.log(obj['prop'])
+// initialValues['']
 export default InputBox;
