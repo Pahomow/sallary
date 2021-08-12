@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import {Button,Dialog, DialogActions,DialogContent,DialogTitle, TextField} from '@material-ui/core'
+import DialogComponent from "../../Dialog";
 
 export default function Table({columns , rows }) {
   const [currentRow,setCurrentRow] = useState(null)
@@ -17,31 +18,40 @@ export default function Table({columns , rows }) {
 }
   return (
     <div style={{ height: 300, width: "100%" }}>
-    {currentRow && (<Dialog open={showDialog}>
-      <DialogTitle>Update data</DialogTitle>
-      <DialogContent> 
-        {columns.map((item) => {
-          return (
-            <TextField
-            key={item.id} 
-            label={item.label}
-            placeholder="Enter Your name"
-            fullWidth 
-            name={item.field}
-            // value= {currentRow.name}
-            onChange={handleChange}/>
-          )
-        })}
-      </DialogContent>
-      <DialogActions>
-        <Button variant="contained" color="primary" onClick={updateRow}>
-          Update
-        </Button>
-        <Button variant="outlined" color="primary" onClick={()=> setShowDialog(false)}>
-          Cancel
-        </Button>
-      </DialogActions>  
-    </Dialog>)}
+      {currentRow && (
+          <DialogComponent
+              showDialog = {showDialog }
+              columns = {columns}
+              handleChange={handleChange}
+              updateRow={updateRow}
+              setShowDialog={setShowDialog}
+          />
+      )}
+    {/*{currentRow && (<Dialog open={showDialog}>*/}
+    {/*  <DialogTitle>Update data</DialogTitle>*/}
+    {/*  <DialogContent> */}
+    {/*    {columns.map((item) => {*/}
+    {/*      return (*/}
+    {/*        <TextField*/}
+    {/*        key={item.id} */}
+    {/*        label={item.label}*/}
+    {/*        placeholder="Enter Your name"*/}
+    {/*        fullWidth */}
+    {/*        name={item.field}*/}
+    {/*        // value= {currentRow.name}*/}
+    {/*        onChange={handleChange}/>*/}
+    {/*      )*/}
+    {/*    })}*/}
+    {/*  </DialogContent>*/}
+    {/*  <DialogActions>*/}
+    {/*    <Button variant="contained" color="primary" onClick={updateRow}>*/}
+    {/*      Update*/}
+    {/*    </Button>*/}
+    {/*    <Button variant="outlined" color="primary" onClick={()=> setShowDialog(false)}>*/}
+    {/*      Cancel*/}
+    {/*    </Button>*/}
+    {/*  </DialogActions>  */}
+    {/*</Dialog>)}*/}
     <Button 
         disabled={!currentRow} 
         onClick={()=> setShowDialog(true)}
