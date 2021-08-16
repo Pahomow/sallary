@@ -1,7 +1,7 @@
 import { Button } from "@material-ui/core";
-const ButtonComponent = ({title, handleClick , disabled}) => {
+const ButtonComponent = ({title,variant, onClick , disabled, color}) => {
     return (
-        <Button type="submit" disabled={disabled} onClick={handleClick}> {title} </Button>
+        <Button type="submit" variant={variant} color={color} disabled={disabled} onClick={onClick}> {title} </Button>
     )
 } 
 export default ButtonComponent

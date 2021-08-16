@@ -4,7 +4,6 @@ import {publicRoutes , privateRoutes} from "../../routes";
 import { LOGIN_ROUTE , user} from "../../utils/consts";
 
 const AppRouter = () => {
-
     return user ?
         (
             <>

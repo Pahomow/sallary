@@ -6,13 +6,10 @@ import SelectorForm from "../Selector";
 const InputBox = ({initialValues ,name ,typographyComponentName,numberOfEmployees, label , value , rename}) => {
   
   const inputGenerator = (value) => {
-    console.log(value);
    return Array(value).fill(null).map(item => (
-      <Box>
         <Box>
          In developing
         </Box>
-      </Box>
    ))}
   
   return ( 
@@ -23,10 +20,5 @@ const InputBox = ({initialValues ,name ,typographyComponentName,numberOfEmployee
         </Box> 
         )
 };
-// const obj = {
-// 'prop1': 'foo',
-// 'prop2': 'bar'
-//}
-//console.log(obj['prop'])
-// initialValues['']
+
 export default InputBox;

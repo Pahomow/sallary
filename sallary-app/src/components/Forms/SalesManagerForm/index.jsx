@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from "axios";
 import {
   Formik,
   Form,
@@ -26,6 +27,14 @@ const validationSchema = yup.object({
 });
 
 const SalesManagerForm = ({initialValues}) => {
+  // useEffect(()=> {
+  //   try {
+  //    const data = axios.get('http://localhost:8000/clients')
+  //     console.log("data" ,data)
+  //   } catch (e) {
+  //     console.log(`😱 Axios request failed: ${e}`);
+  //   }
+  // },[])
   return (
     <Box>
       <Formik

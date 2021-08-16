@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Paper, Tabs , Tab} from '@material-ui/core'
 import { privateRoutes } from '../../routes';
 import { useHistory } from 'react-router-dom';
-
+// import useStyles from './style';
 
 const useStyles = makeStyles({
   root: {
@@ -27,11 +27,13 @@ export default function NavBar() {
   return (
     <Paper className={classes.root}>
       <Tabs
-        value={value}
-        onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
-        // centered
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable auto tabs example"
       >
         {privateRoutes.map(item => {
           return  <Tab onClick={(event =>  handleClick(event , item))} key={item.path} label= {item.name} />

@@ -57,7 +57,6 @@ const ProjectManagerForm = ({initialValues}) => {
               <ListFormik transfer name="projects" initialValues={values.projects}/>
             </Box>
 
-
             <Box>
                 <SelectorForm label="Удалить PM" name="remove" initialState={values.removeClient} selector={selector.team}/>                         
             </Box>              

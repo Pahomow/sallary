@@ -2,18 +2,9 @@ import React, {useState} from "react";
 import { FieldArray } from 'formik';
 import {List ,Button ,Dialog, DialogActions,DialogTitle, Box, ListItemText ,ListItem, ListItemIcon } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { makeStyles } from '@material-ui/core/styles';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import useStyles from './style.css';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
-      overflow: 'auto',
-      overflowX: 'hidden',
-      maxHeight: 300,
-    },
-}));
 
 export const ListFormik = ({initialValues, name, transfer, removeButton}) => {
     const [showDialog,setShowDialog] = useState(false)
