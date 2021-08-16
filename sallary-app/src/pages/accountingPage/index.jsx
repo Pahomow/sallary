@@ -1,5 +1,3 @@
-
-
 import Table from '../../components/Tables/Table'
 import { freelanceExpenses } from "../../mocks"
 import { Box } from '@material-ui/core'

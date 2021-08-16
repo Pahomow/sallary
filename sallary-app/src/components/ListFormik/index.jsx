@@ -3,8 +3,7 @@ import { FieldArray } from 'formik';
 import {List ,Button ,Dialog, DialogActions,DialogTitle, Box, ListItemText ,ListItem, ListItemIcon } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import useStyles from './style.css';
-
+import useStyles from './style';
 
 export const ListFormik = ({initialValues, name, transfer, removeButton}) => {
     const [showDialog,setShowDialog] = useState(false)
@@ -38,7 +37,6 @@ export const ListFormik = ({initialValues, name, transfer, removeButton}) => {
                 {initialValues.length > 0 &&
                   initialValues.map((project, index) => (
                     <div className="row" key={index}>
-                        {console.log(project)}  
                         <ListItem button>
                             <ListItemText inset primary={project.name} />
                             {removeButton && (

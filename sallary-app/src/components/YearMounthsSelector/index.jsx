@@ -23,7 +23,7 @@ const DataSelector = ({label ,selector, initialValues}) => {
                 {label? <TypographyComponent title={label} /> : null}
                     <Box>
                         <SelectorForm selector={selector.mounths} name="mounths" initialState={values.mounth} />
-                        <SelectorForm selector={selector.years} name="years"initialState={values.years} />
+                        <SelectorForm selector={selector.years} name="years" initialState={values.years} />
                         <ButtonComponent title="submit"/>
                     </Box>
 

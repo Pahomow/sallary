@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import { DataGrid } from "@material-ui/data-grid";
-import {Button,Dialog, DialogActions,DialogContent,DialogTitle, TextField} from '@material-ui/core'
+import {Button,Box} from '@material-ui/core'
 import DialogComponent from "../../Dialog";
+import AccoutingDialogComponent from "../../AccoutingDialog";
 
-export default function Table({columns , rows }) {
+export default function Table({columns , rows , accouting}) {
   const [currentRow,setCurrentRow] = useState(null)
   const [showDialog,setShowDialog] = useState(false)
   const [dataRows, setDataRows] = useState(rows)
@@ -17,41 +18,20 @@ export default function Table({columns , rows }) {
     setShowDialog(false)  
 }
   return (
-    <div style={{ height: 300, width: "100%" }}>
+    <Box style={{ height: 300, width: "100%" }}>
       {currentRow && (
-          <DialogComponent
-              showDialog = {showDialog }
-              columns = {columns}
-              handleChange={handleChange}
-              updateRow={updateRow}
-              setShowDialog={setShowDialog}
-          />
+          accouting ?
+          <AccoutingDialogComponent/>
+          :
+              <DialogComponent
+                  showDialog = {showDialog }
+                  columns = {columns}
+                  handleChange={handleChange}
+                  updateRow={updateRow}
+                  setShowDialog={setShowDialog}
+              />
       )}
-    {/*{currentRow && (<Dialog open={showDialog}>*/}
-    {/*  <DialogTitle>Update data</DialogTitle>*/}
-    {/*  <DialogContent> */}
-    {/*    {columns.map((item) => {*/}
-    {/*      return (*/}
-    {/*        <TextField*/}
-    {/*        key={item.id} */}
-    {/*        label={item.label}*/}
-    {/*        placeholder="Enter Your name"*/}
-    {/*        fullWidth */}
-    {/*        name={item.field}*/}
-    {/*        // value= {currentRow.name}*/}
-    {/*        onChange={handleChange}/>*/}
-    {/*      )*/}
-    {/*    })}*/}
-    {/*  </DialogContent>*/}
-    {/*  <DialogActions>*/}
-    {/*    <Button variant="contained" color="primary" onClick={updateRow}>*/}
-    {/*      Update*/}
-    {/*    </Button>*/}
-    {/*    <Button variant="outlined" color="primary" onClick={()=> setShowDialog(false)}>*/}
-    {/*      Cancel*/}
-    {/*    </Button>*/}
-    {/*  </DialogActions>  */}
-    {/*</Dialog>)}*/}
+
     <Button 
         disabled={!currentRow} 
         onClick={()=> setShowDialog(true)}
@@ -61,6 +41,6 @@ export default function Table({columns , rows }) {
         Edit
       </Button>
       <DataGrid rows={dataRows} onRowSelected={item => setCurrentRow(item.data)} columns={columns} />
-    </div>
+    </Box>
   );
 }

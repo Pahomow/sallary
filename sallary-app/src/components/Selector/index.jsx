@@ -9,7 +9,6 @@ const SelectorForm = ({ selector , label, name }) => {
         {arrayHelpers => (
         <Box>
                 <Field
-                
                     key={name}
                     name={name} 
                     as={Select}
