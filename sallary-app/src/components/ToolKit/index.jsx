@@ -8,7 +8,7 @@ import {getFreelancers} from "../../reduxToolkit/freelancersSlice";
 const ToolKit = () => {
 const dispatch = useDispatch()
 const handleClickPosts = () => {
-  dispatch(getEmployees({}))
+  dispatch(getClients({}))
 }
 const handleClick = () => {
   // dispatch(getPosts({}))

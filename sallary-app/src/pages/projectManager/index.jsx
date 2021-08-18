@@ -3,7 +3,11 @@ import ProjectManagerForm from "../../components/Forms/ProjectManagerForm"
 import Table from "../../components/Tables/Table"
 import { projectMangers,pmManager  } from "../../mocks"
 import { columns } from "../../utils/consts"
+import {useSelector} from "react-redux";
+
 const ProjectManagerPage = () => {
+const {data} = useSelector(state => state)
+    console.log(data)
 const initialValues = {
         name: "",
         countries: '',

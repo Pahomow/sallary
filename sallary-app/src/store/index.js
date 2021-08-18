@@ -26,7 +26,6 @@ export const store = configureStore({
         projectInfo:projectInfo,
         freelanceExpenses:freelanceExpenses,
         projectSlice:projectSlice,
-
-
+        
     }
 })

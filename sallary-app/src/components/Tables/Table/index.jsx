@@ -8,7 +8,7 @@ export default function Table({columns , rows , accouting}) {
   const [currentRow,setCurrentRow] = useState(null)
   const [showDialog,setShowDialog] = useState(false)
   const [dataRows, setDataRows] = useState(rows)
-  console.log(currentRow)
+
   const handleChange = e => {
     setCurrentRow({...currentRow, [e.target.name]: e.target.value})
 }

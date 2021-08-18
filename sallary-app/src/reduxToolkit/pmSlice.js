@@ -5,7 +5,7 @@ export const getPm = createAsyncThunk(
   'pm/getPm',
   async ( { dispatch, getState }) => {
 
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`, {
+    const response = await axios.get(`http://localhost:8000/pm`, {
     })
     console.log(response.data)
     return response.data

@@ -5,7 +5,7 @@ export const getClients = createAsyncThunk(
   'clients/getClients',
   async ( { dispatch, getState }) => {
 
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`, {
+    const response = await axios.get(`http://localhost:8000/clients`, {
     })
     console.log(response.data)
     return response.data
