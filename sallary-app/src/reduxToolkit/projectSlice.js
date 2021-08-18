@@ -12,7 +12,19 @@ export const getProjects = createAsyncThunk(
     // todo: try real api
   }
 )
+export const getCurrentPmProjects = createAsyncThunk(
+    'projects/getProjects',
+    async ({id}, { dispatch, getState }) => {
 
+      const response = await axios.get(`http://localhost:8000/projects/pm/:${id}`, {
+      })
+      console.log(response.data)
+      return response.data
+    }
+)
+// 60f80b6432711e1e3cbedbdf
+// http://localhost:8000/projects/pm/:id
+// http://localhost:8000/projects/pm/:id
 export const postProjects = createAsyncThunk(
   'projects/postProjects',
   async ( { dispatch, getState }) => {
@@ -137,6 +149,16 @@ const projectsSlice = createSlice({
       state.status = 'success'
     },
     [patchProjects.rejected]: (state, action) => {
+      state.status = 'failed'
+    },
+    [getCurrentPmProjects.pending]: (state, action) => {
+      state.status = 'loading'
+    },
+    [getCurrentPmProjects.fulfilled]: (state, { payload }) => {
+      state.list = payload
+      state.status = 'success'
+    },
+    [getCurrentPmProjects.rejected]: (state, action) => {
       state.status = 'failed'
     },
   },

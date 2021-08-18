@@ -15,15 +15,11 @@ export const getPm = createAsyncThunk(
 
 export const postPm = createAsyncThunk(
   'pm/postPm',
-  async ( { dispatch, getState }) => {
+  async ({data}, { dispatch, getState }) => {
 
     await fetch(`https://jsonplaceholder.typicode.com/posts`, {
       method: 'POST',
-      body: JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1,
-      }),
+      body: JSON.stringify(data),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -31,13 +27,12 @@ export const postPm = createAsyncThunk(
       .then((response) => response.json())
       .then((json) => console.log(json));
   }
-
 )
 
 export const deletePm = createAsyncThunk(
   'pm/postPm',
-  async ( { dispatch, getState }) => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  async ({id}, { dispatch, getState }) => {
+    fetch(`http://localhost:8000/pm/:${id}`, {
       method: 'DELETE',
     })
       .then((response) => response.json())
